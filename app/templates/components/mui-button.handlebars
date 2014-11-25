@@ -1,0 +1,8 @@
+{{#if icon}}
+  {{mui-ripple rippleEventBinding="_rippleEvent" muiClass="mui-icon-button-ripple"}}
+  {{mui-ripple muiClass="mui-icon-button-focus-ripple"}}
+{{else}}
+  {{mui-ripple rippleEventBinding="_rippleEvent" muiClass="mui-flat-button-ripple"}}
+  {{mui-ripple muiClass="mui-flat-button-focus-ripple"}}
+{{/if}}
+{{yield}}

@@ -1,3 +1,29 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+
 
 {{outlet}}
+<h2 id='title'>Paper Buttons</h2>  
+{{#mui-paper-button type="paper"}}
+  My Paper Button 
+{{/mui-paper-button}}
+
+{{#mui-paper-button type="flat"}}
+  My Flat Button
+{{/mui-paper-button}}
+
+{{#mui-paper-button type="fab"}}
+  {{mui-icon icon="action-favorite-outline"}}
+{{/mui-paper-button}}
+
+{{#mui-paper-button type="fab-mini"}}
+  {{mui-icon icon="action-favorite-outline"}}
+{{/mui-paper-button}}
+
+<h2 id='title'>Buttons</h2>
+
+{{#mui-button}}
+  Flat button
+{{/mui-button}}
+
+{{#mui-button icon=true}}
+  {{mui-icon icon="action-favorite-outline"}}
+{{/mui-button}}
