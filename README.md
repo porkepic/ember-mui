@@ -1,10 +1,13 @@
 # Material-ui
 
-This README outlines the details of collaborating on this Ember addon.
+Ember port of the excellent Call-Em-All [https://github.com/callemall/material-ui](Material-UI).
+
+WIP.
 
 ## Installation
 
 * `git clone` this repository
+* `git submodule init` to load the original material-ui code
 * `npm install`
 * `bower install`
 
