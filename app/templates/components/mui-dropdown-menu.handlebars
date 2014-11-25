@@ -1,0 +1,12 @@
+<div class="mui-menu-control" {{action "controlClick"}}>
+  {{mui-paper class="mui-menu-control-bg" depth=0}}
+  <div class="mui-menu-label">
+    {{label}}
+  </div>
+  {{mui-icon class="mui-menu-drop-down-icon" icon="navigation-arrow-drop-down"}}
+  <div class="mui-menu-control-underline">
+  </div>
+</div>
+{{#mui-menu hideable=true visible=open}}
+  {{yield}}
+{{/mui-menu}}

@@ -1,9 +1,8 @@
 import Ember from "ember";
 
 export default Ember.Component.extend({
-  layoutName: "mui-paper",
-  classNameBindings: ["mui-paper",
-                      "typeClass",
+  layoutName: "components/mui-paper",
+  classNameBindings: ["typeClass",
                       "depthClass",
                       "primary:mui-primary",
                       "disabled:mui-disabled",
