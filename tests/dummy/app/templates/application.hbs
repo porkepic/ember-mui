@@ -31,7 +31,25 @@
 
 <h2 id='title'>Menus</h2>
 <div style="width:200px">
-{{#mui-dropdown-menu label="dropdown"}}
-  {{#mui-menu-item}}test{{/mui-menu-item}}
-{{/mui-dropdown-menu}}
+  {{#mui-dropdown-menu label="dropdown"}}
+    {{#mui-menu-item}}
+      test
+    {{/mui-menu-item}}
+  {{/mui-dropdown-menu}}
+</div>
+<div style="width:200px">
+  {{#mui-dropdown-menu icon="navigation_expand_more"}}
+    {{#mui-menu-item}}
+      test
+    {{/mui-menu-item}}
+  {{/mui-dropdown-menu}}
+</div>
+
+<div style="width:200px">
+  {{#mui-select}}
+    {{mui-menu-item label="Choose..." value=null}}
+    {{#each item in selectValues}}
+      {{mui-menu-item label=item.label value=item.value}}
+    {{/each}}
+  {{/mui-select}}
 </div>

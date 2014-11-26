@@ -1,2 +1,6 @@
 {{mui-ripple rippleEventBinding="_rippleEvent"}}
-{{yield}}
+{{#if label}}
+  {{label}}
+{{else}}
+  {{yield}}
+{{/if}}

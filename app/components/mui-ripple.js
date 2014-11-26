@@ -7,11 +7,16 @@ export default Ember.Component.extend({
                       "visible:mui-is-visible"],
 
   visible: false,
+  center: false,
   muiClass: null,
 
   rippleEvent: null,
   rippleEventChange: function(){
-    this.animate(this.get("rippleEvent"));
+    if(this.get("center")){
+      this.animateFromCenter();
+    }else{
+      this.animate(this.get("rippleEvent"));
+    }
   }.observes("rippleEvent"),
 
   animate: function(e){
@@ -26,9 +31,9 @@ export default Ember.Component.extend({
   },
 
   animateFromCenter: function() {
-    var el = this.$()[0],
-      x = el.parentNode.offsetWidth / 2,
-      y = el.parentNode.offsetHeight / 2;
+    var el = this.$(),
+      x = el[0].parentNode.offsetWidth / 2,
+      y = el[0].parentNode.offsetHeight / 2;
 
     this._animateRipple(el, x, y);
   },
