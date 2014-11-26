@@ -1,0 +1,10 @@
+{{#if multiline}}
+  {{textarea value=value placeholder="" rows=rows disabled=disabled required=required}}
+{{else}}
+  {{input value=value placeholder="" disabled=disabled required=required}}
+{{/if}}
+<span class="mui-input-placeholder" {{action "clickPlaceholder"}}>{{placeholder}}</span>
+<span class="mui-input-highlight"></span>
+<span class="mui-input-bar"></span>
+{{#if description}}<span class="mui-input-description">{{description}}</span>{{/if}}
+{{#if error}}<span class="mui-input-error">{{error}}</span>{{/if}}
