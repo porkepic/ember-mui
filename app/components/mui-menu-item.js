@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   classNameBindings: [":mui-menu-item",
                       "selected:mui-selected"],
   select: nearestParent("mui-select"),
+  menu: nearestParent("mui-dropdown-menu"),
 
   label: null,
   value: null,
@@ -41,6 +42,7 @@ export default Ember.Component.extend({
       select.set("open", false);
     }else{
       this.sendAction("action");
+      this.set("menu.open", false);
     }
   }
 });
