@@ -7,5 +7,7 @@ export default Ember.ObjectController.extend({
     {label:"John Kennedy", value:2},
     {label:"John Fitzgerald", value:3},
     {label:"John Malcovich", value:4}
-  ]}.property()
+  ]}.property(),
+
+  radioSelection: 1
 });
