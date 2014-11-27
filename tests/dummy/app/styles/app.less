@@ -1,0 +1,90 @@
+@import "material-ui/scaffolding.less";
+@import "material-ui/components.less";
+
+@import "docs/color-palette.less";
+@import "docs/component-info.less";
+@import "docs/footer.less";
+@import "docs/layout/full-width-section.less";
+
+@import "docs/pages/get-started-page.less";
+@import "docs/pages/home-contribute.less";
+@import "docs/pages/home-features.less";
+@import "docs/pages/home-page-hero.less";
+@import "docs/pages/home-purpose.less";
+@import "docs/pages/page-with-nav.less";
+@import "docs/pages/components/buttons.less";
+@import "docs/pages/components/icon.less";
+@import "docs/pages/components/paper.less";
+
+a {
+  color: @accent-1-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* App Specific Styles */
+.mui-app-canvas {
+
+  height: 100%;
+
+  .mui-app-bar {
+    .github-icon-button {
+      float: right;
+      margin-right: -16px;
+    }
+  }
+}
+
+.logo {
+  cursor: pointer;
+  .mui-font-style-headline;
+  .mui-text-full-white;
+  line-height: @app-bar-height;
+  .mui-font-weight-light;
+  background-color: @primary-1-color;
+  padding-left: @desktop-gutter;
+  padding-top: 0;
+  margin-bottom: @desktop-gutter-mini;
+}
+
+.baseline-grid {
+  background-image: url('images/baseline-20px-grid.gif');
+}
+
+.code-example {
+  background-color: @white;
+  margin-bottom: 32px;
+
+  .example-label {
+    .mui-font-style-menu;
+    display: inline-block;
+    text-transform: uppercase;
+    color: @min-black;
+    padding: @desktop-gutter-mini;
+    border-right: solid 1px @border-color;
+    border-bottom: solid 1px @border-color;
+    margin-bottom: 0;
+    .lh-border-radius(0 0 2px 0);
+  }
+
+  .example-block,
+  .code-block {
+    padding: @desktop-gutter;
+  }
+
+  .code-block {
+    border-top: solid 1px @border-color;
+    .lh-border-radius(0 0 2px 2px);
+  }
+}
+
+.example-menu {
+  width: (64px * 4);
+}
+
+.example-menu-nested {
+  width: (64px * 3);
+}

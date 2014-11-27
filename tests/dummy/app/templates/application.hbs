@@ -1,73 +1,133 @@
+<div class="mui-app-canvas mui-predefined-layout-1">
+  <div class="mui-app-content-canvas page-with-nav">
+    <div class="page-with-nav-secondary-nav">
+      <h3>Material UI for Ember</h3>
+      <a href="https://github.com/porkepic/ember-mui">Github Project</a>
+    </div>
+    <div class="page-with-nav-content">
+      <h2 class="mui-font-style-headline">Buttons</h2>
+        {{#mui-paper type="paper" class="code-example"}}
+          <div class="example-block">
+            <div class="button-examples">
+              <div class="button-example-group">
+                <div class="button-example-container">
+                  {{#mui-paper-button type="flat"}}
+                    Default
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="flat" primary=true}}
+                    Default
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="flat" disabled=true}}
+                    Default
+                  {{/mui-paper-button}}
+                </div>
+              </div>
+
+              <div class="button-example-group">
+                <div class="button-example-container">
+                  {{#mui-paper-button type="paper"}}
+                    Default
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="paper" primary=true}}
+                    Default
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="paper" disabled=true}}
+                    Default
+                  {{/mui-paper-button}}
+                </div>
+              </div>
+
+              <div class="button-example-group">
+                <div class="button-example-container">
+                  {{#mui-paper-button type="fab"}}
+                    {{mui-icon icon="action-grade"}}
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="fab-mini"}}
+                    {{mui-icon icon="action-grade"}}
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="fab" disabled=true}}
+                    {{mui-icon icon="action-grade"}}
+                  {{/mui-paper-button}}
+                </div>
+                <div class="button-example-container">
+                  {{#mui-paper-button type="fab-mini" disabled=true}}
+                    {{mui-icon icon="action-grade"}}
+                  {{/mui-paper-button}}
+                </div>
+              </div>
+            </div>
+          {{/mui-paper}}
+
+          <h2 class="mui-font-style-headline">Dropdowns</h2>
+          {{#mui-paper type="paper" class="code-example"}}
+            <div class="example-block">
+              <h5>Actions</h5>
+              <div style="width:200px">
+                {{#mui-dropdown-menu label="Action Dropdown"}}
+                  {{#mui-menu-item}} Do this. {{/mui-menu-item}}
+                  {{#mui-menu-item}} Do that. {{/mui-menu-item}}
+                  {{#mui-menu-item}} Or go there. {{/mui-menu-item}}
+                {{/mui-dropdown-menu}}
+              </div>
+              <h5>Selects</h5>
+              <div style="width:200px">
+                {{#mui-select}}
+                  {{mui-menu-item label="Choose..." value=null}}
+                  {{#each item in selectValues}}
+                    {{mui-menu-item label=item.label value=item.value}}
+                  {{/each}}
+                {{/mui-select}}
+              </div>
+            </div>
+          {{/mui-paper}}
 
 
-{{outlet}}
-<h2 id='title'>Paper Buttons</h2>  
-{{#mui-paper-button type="paper"}}
-  My Paper Button 
-{{/mui-paper-button}}
+          <h2 class="mui-font-style-headline">Text Inputs</h2>
+          {{#mui-paper type="paper" class="code-example"}}
+            <div class="example-block">
+              <h5>Field</h5>
+              {{mui-input placeholder="First Name" description="your name"}}
 
-{{#mui-paper-button type="flat"}}
-  My Flat Button
-{{/mui-paper-button}}
+              <h5>With error</h5>
 
-{{#mui-paper-button type="fab"}}
-  {{mui-icon icon="action-favorite-outline"}}
-{{/mui-paper-button}}
+              {{mui-input placeholder="Last Name" error="required"}}
 
-{{#mui-paper-button type="fab-mini"}}
-  {{mui-icon icon="action-favorite-outline"}}
-{{/mui-paper-button}}
+              <h5>Multiline</h5>
 
-<h2 id='title'>Buttons</h2>
+              {{mui-input multiline=true placeholder="Description" description="All the things"}}
+            </div>
+          {{/mui-paper}}
+          <h2 class="mui-font-style-headline">Switch Inputs</h2>
+          {{#mui-paper type="paper" class="code-example"}}
+            <div class="example-block">
+              <h5>Checkboxes</h5>
+              {{mui-checkbox }}
+              <br/>
+              {{mui-checkbox value=true}}
+              <br/>
+              {{mui-checkbox}}
 
-{{#mui-button}}
-  Flat button
-{{/mui-button}}
-
-{{#mui-button icon=true}}
-  {{mui-icon icon="action-favorite-outline"}}
-{{/mui-button}}
-
-
-<h2 id='title'>Menus</h2>
-<div style="width:200px">
-  {{#mui-dropdown-menu label="dropdown"}}
-    {{#mui-menu-item}}
-      test
-    {{/mui-menu-item}}
-  {{/mui-dropdown-menu}}
-</div>
-<div style="width:200px">
-  {{#mui-dropdown-menu icon="navigation_expand_more"}}
-    {{#mui-menu-item}}
-      test
-    {{/mui-menu-item}}
-  {{/mui-dropdown-menu}}
-</div>
-
-<div style="width:200px">
-  {{#mui-select}}
-    {{mui-menu-item label="Choose..." value=null}}
-    {{#each item in selectValues}}
-      {{mui-menu-item label=item.label value=item.value}}
-    {{/each}}
-  {{/mui-select}}
-</div>
-
-<h2>Inputs</h2>
-<div>
-  {{mui-radio-button selection=radioSelection value=1}}
-  {{mui-radio-button selection=radioSelection value=2}}
-</div>
-<div>
-  {{mui-checkbox }}
-  {{mui-checkbox value=true}}
-</div>
-<div>
-  {{mui-input placeholder="First Name" description="your name"}}
-  {{mui-input placeholder="Last Name" error="required"}}
-</div>
-<div>
-  {{mui-input multiline=true placeholder="Description" description="All the things"}}
-  {{mui-input multiline=true placeholder="Description" error="required"}}
+              <h5>Radio Buttons</h5>
+              {{mui-radio-button selection=radioSelection value=1}}
+              <br/>
+              {{mui-radio-button selection=radioSelection value=2}}
+              <br/>
+              {{mui-radio-button selection=radioSelection value=3}}
+            </div>
+          {{/mui-paper}}
+      </div>
+    </div>
+  </div>
 </div>

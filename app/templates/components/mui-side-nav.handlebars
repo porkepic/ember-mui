@@ -1,0 +1,7 @@
+{{#unless docked}}
+  <div class="mui-overlay" {{action "dismissOverlay"}}></div>
+{{/unless}}
+
+{{#mui-paper class="mui-left-nav-menu" depth=2 rounded=false}}
+  {{yield}}
+{{/mui-paper}}
